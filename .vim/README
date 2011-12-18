@@ -1,0 +1,3 @@
+Please put ".vim" under your home directory, and create following symbolic link,
+
+# ln -s ~/.vim/vimrc ~/.vimrc

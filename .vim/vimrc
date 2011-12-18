@@ -1,0 +1,34 @@
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+"call pathogen#infect()
+syntax on
+filetype on
+filetype plugin indent on
+set nu
+set background=dark
+set tags=tags;/
+":set tabstop=8
+":set softtabstop=4
+":set shiftwidth=4
+set cindent
+set foldmethod=syntax
+set foldlevel=99
+set ch=2
+set hls
+set ff=unix
+set smarttab
+set autoindent
+let Tlist_Inc_Winwidth=0
+let Tlist_Exit_OnlyWindow=1
+let Tlist_Use_Right_Window=1
+let g:bufExplorerFindActive=1
+let g:bufExplorerShowDirectories=1
+":hi StatusLine guifg=#90fff0 guibg=#2050d0 ctermfg=white ctermbg=LightBlue
+":hi TabLineFill guifg=#90fff0 guibg=#2050d0 ctermfg=white ctermbg=LightBlue
+hi TabLine guifg=#90fff0 guibg=#2050d0 ctermfg=black ctermbg=white
+hi TabLineSel guifg=#90fff0 guibg=#2050d0 ctermfg=White ctermbg=LightGreen
+":map :tabnew 
+map <F3> :tabnew 
+map <C-N> :tabnext<CR>
+map <C-P> :tabprevious<CR>
+map <C-C> :tabclose<CR>

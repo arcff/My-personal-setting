@@ -61,7 +61,7 @@ if has("cscope")
     endwhile
 
     " After searching for cscope.out, we should be back to cur_dir
-    :cd $PWD
+"    :cd $PWD
 
     " show msg when any other cscope db added
     set cscopeverbose  

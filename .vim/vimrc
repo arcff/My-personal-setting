@@ -32,3 +32,15 @@ map <F3> :tabnew
 map <C-N> :tabnext<CR>
 map <C-P> :tabprevious<CR>
 map <C-C> :tabclose<CR>
+"" Return to the position of file which has been opened
+if has("autocmd")
+	autocmd BufRead *.txt set tw=78
+	autocmd BufReadPost *
+				\ if line("'\"") > 0 && line ("'\"") <= line("$") |
+				\   exe "normal g'\"" |
+				\ endif
+endif
+"" Set status line
+set ls=2
+set statusline=%<%f\ %m%=\ %h%r\ %-19([%p%%]\ %3l,%02c%03V%)%y
+highlight StatusLine term=inverse,bold cterm=inverse,bold ctermbg=yellow ctermfg=black
